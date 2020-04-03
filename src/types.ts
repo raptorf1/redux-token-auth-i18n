@@ -89,6 +89,7 @@ export interface UserRegistrationDetails {
 export interface UserSignInCredentials {
   readonly email: string
   readonly password: string
+  readonly locale: string
 }
 
 export interface UserSignOutCredentials {

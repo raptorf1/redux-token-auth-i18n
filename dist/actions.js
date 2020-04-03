@@ -179,12 +179,12 @@ var generateAuthActions = function (config) {
     }; };
     var signInUser = function (userSignInCredentials) { return function (dispatch) {
         return __awaiter(this, void 0, void 0, function () {
-            var email, password, response, userAttributesToSave, error_3;
+            var email, password, locale, response, userAttributesToSave, error_3;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         dispatch(exports.signInRequestSent());
-                        email = userSignInCredentials.email, password = userSignInCredentials.password;
+                        email = userSignInCredentials.email, password = userSignInCredentials.password, locale = userSignInCredentials.locale;
                         _a.label = 1;
                     case 1:
                         _a.trys.push([1, 3, , 4]);
@@ -194,6 +194,7 @@ var generateAuthActions = function (config) {
                                 data: {
                                     email: email,
                                     password: password,
+                                    locale: locale,
                                 },
                             })];
                     case 2:

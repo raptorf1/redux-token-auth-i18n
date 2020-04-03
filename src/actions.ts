@@ -191,6 +191,7 @@ const generateAuthActions = (config: { [key: string]: any }): ActionsExport => {
     const {
       email,
       password,
+      locale,
     } = userSignInCredentials
     try {
       const response = await axios({
@@ -199,6 +200,7 @@ const generateAuthActions = (config: { [key: string]: any }): ActionsExport => {
         data: {
           email,
           password,
+          locale,
         },
       })
       setAuthHeaders(response.headers)
